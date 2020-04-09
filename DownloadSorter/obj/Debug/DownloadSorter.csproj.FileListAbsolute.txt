@@ -1,0 +1,10 @@
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\bin\Debug\DownloadSorter.exe.config
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\bin\Debug\DownloadSorter.exe
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\bin\Debug\DownloadSorter.pdb
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\bin\Debug\Topshelf.dll
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\bin\Debug\Topshelf.xml
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\obj\Debug\DownloadSorter.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\obj\Debug\DownloadSorter.csproj.CopyComplete
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\obj\Debug\DownloadSorter.exe
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\obj\Debug\DownloadSorter.pdb
+C:\Users\HP\source\repos\DownloadSorter\DownloadSorter\obj\Debug\DownloadSorter.csprojAssemblyReference.cache

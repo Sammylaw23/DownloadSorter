@@ -12,11 +12,30 @@ namespace DownloadSorter
     {
         public static void MoveVideo(string sourcePath)
         {
-            string destinationPath = ConfigurationManager.AppSettings["VideoPath"];
+            string fileName = string.Empty;
+            try
+            {
+                string destinationPath = ConfigurationManager.AppSettings["VideoPath"];
 
-            string fileName = Path.GetFileName(sourcePath);
-            destinationPath = Path.Combine(destinationPath, fileName);            
-            File.Move(sourcePath, destinationPath);
+                 fileName = Path.GetFileName(sourcePath);
+                string[] programmingVideos = { "PROGRAMMING", "C#", "NET" };
+                if (programmingVideos.Any(fileName.ToUpperInvariant().Contains))
+                {
+                    destinationPath = Path.Combine(destinationPath, fileName);
+                    File.Move(sourcePath, destinationPath);
+                }
+                else
+                {
+                    destinationPath = Path.Combine(destinationPath, fileName);
+                    File.Move(sourcePath, destinationPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(fileName);
+                           }
         }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.IO;
 
 namespace DownloadSorter
@@ -7,12 +8,21 @@ namespace DownloadSorter
     {
         public static void MoveUnknown(string sourcePath)
         {
-            string destinationPath = ConfigurationManager.AppSettings["OthersPath"];
+            string fileName = string.Empty;
+            try
+            {
+                string destinationPath = ConfigurationManager.AppSettings["OthersPath"];
 
-            string fileName = Path.GetFileName(sourcePath);
-            destinationPath = Path.Combine(destinationPath, fileName);
-            destinationPath = destinationPath + fileName;
-            File.Move(sourcePath, destinationPath);
+                 fileName = Path.GetFileName(sourcePath);
+                destinationPath = Path.Combine(destinationPath, fileName);
+                File.Move(sourcePath, destinationPath);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(fileName);
+                //return;
+            }
         }
     }
 }

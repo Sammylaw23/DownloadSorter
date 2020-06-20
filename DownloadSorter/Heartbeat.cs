@@ -25,7 +25,12 @@ namespace DownloadSorter
 
         public void Start()
         {
+            _timer.AutoReset = false;
+            _timer.Enabled = true;
+
             _timer.Start();
+
+          
         }
 
         public void Stop()

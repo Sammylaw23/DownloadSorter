@@ -25,11 +25,14 @@ namespace DownloadSorter
 
             string[] filePaths2 = Directory.GetFiles(sourcePath, "*");
             string[] filePaths = Directory.GetFiles(sourcePath);
+            var filesInDownloads = Directory.EnumerateFiles(sourcePath).Where(file => !file.ToLower().Contains("desktop.ini"));
 
-            int fileCount = filePaths.Count();//Log this
 
-            foreach (var file in filePaths)
+            int fileCount = filesInDownloads.Count();//Log this
+
+            foreach (var file in filesInDownloads)
             {
+                Console.WriteLine("Moving " + file);
                 string fileExtention = Path.GetExtension(file);
 
                 var is_pic = filePaths.Any(i => picExt.Contains(fileExtention));
@@ -63,6 +66,10 @@ namespace DownloadSorter
                     Others.MoveUnknown(file);
                 }
             }
+
+
+            Console.WriteLine("I am done");
+            Console.ReadKey();
         }
     }
 }
